@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Mã QR Sống Xanh</title>
-  <script src="https://cloudflare.com"></script>
+  <script src="https://unpkg.com"></script>
   <style>
     body {
       display: flex;
@@ -38,12 +38,12 @@
   <div class="khung-qr">
     <div id="ma-qr"></div>
     <h2>Quét mã để mở trang web</h2>
-    <p>https://song-xanh-app.onrender.com/</p>
+    <p>https://onrender.com</p>
   </div>
 
   <script>
     new QRCode(document.getElementById("ma-qr"), {
-      text: "https://song-xanh-app.onrender.com/",
+      text: "https://onrender.com",
       width: 240,
       height: 240,
       colorDark : "#15803d",
