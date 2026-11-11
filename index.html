@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Mã QR Sống Xanh</title>
+  <script src="https://cloudflare.com"></script>
   <style>
     body {
       display: flex;
@@ -20,19 +21,34 @@
       border: 4px solid #15803d;
       border-radius: 16px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #ma-qr {
+      margin-bottom: 15px;
     }
     h2 {
       color: #15803d;
-      margin-top: 15px;
-      margin-bottom: 5px;
+      margin: 5px 0;
     }
   </style>
 </head>
 <body>
   <div class="khung-qr">
-    <img src="https://qrserver.com" alt="Mã QR trang web">
+    <div id="ma-qr"></div>
     <h2>Quét mã để mở trang web</h2>
     <p>https://song-xanh-app.onrender.com/</p>
   </div>
+
+  <script>
+    new QRCode(document.getElementById("ma-qr"), {
+      text: "https://song-xanh-app.onrender.com/",
+      width: 240,
+      height: 240,
+      colorDark : "#15803d",
+      colorLight : "#ffffff"
+    });
+  </script>
 </body>
 </html>
