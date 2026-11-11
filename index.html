@@ -24,7 +24,7 @@
       flex-direction: column;
       align-items: center;
     }
-    #ma-qr {
+    svg {
       margin-bottom: 15px;
     }
     h2 {
@@ -35,24 +35,12 @@
 </head>
 <body>
   <div class="khung-qr">
-    <div id="ma-qr"></div>
+    <svg xmlns="http://w3.org" viewBox="0 0 37 37" width="240" height="240" shape-rendering="crispEdges">
+      <rect width="37" height="37" fill="#ffffff"/>
+      <path fill="#15803d" d="M4 4h7v7H4V4zm1 1v5h5V5H5zm1 1h3v3H6V6zm20-2h7v7h-7V4zm1 1v5h5V5h-5zm1 1h3v3h-3V6zM4 26h7v7H4v-7zm1 1v5h5v-5H5zm1 1h3v3H6v-3zm6-24h2v2h-2V4zm3 0h1v3h-1V4zm2 0h2v1h-2V4zm3 0h1v2h-1V4zm-7 2h1v3h-1V6zm4 0h1v2h-1V6zm2 1h1v3h-1V7zm-9 1h2v1h-2V8zm4 0h2v2h-2V8zm-2 2h1v3h-1v-3zm6 0h2v1h-2v-1zm-9 2h3v1h-3v-1zm5 0h2v2h-2v-2zm4 0h1v3h-1v-3zm2 0h2v1h-2v-1zm3 0h2v2h-2v-2zm3 0h1v3h-1v-3zm2 0h2v1h-2v-1zM4 13h1v3H4v-3zm3 0h2v1H7v-1zm4 0h1v4h-1v-4zm3 1h2v1h-2v-1zm5 0h2v2h-2v-2zm4 0h1v3h-1v-3zm5 0h2v1h-2v-1zm3 0h2v3h-2v-3zM6 15h2v2H6v-2zm3 1h1v3H9v-3zm6 0h2v1h-2v-1zm3 1h1v3h-1v-3zm4 0h2v1h-2v-1zm5 0h1v3h-1v-3zm-22 1h1v3H5v-3zm7 0h3v1h-3v-1zm5 1h1v4h-1v-4zm4 0h2v2h-2v-2zm5 0h3v1h-3v-1zm4 0h1v3h-1v-3zM7 20h1v3H7v-3zm3 0h2v2h-2v-2zm4 1h2v1h-2v-1zm6 0h1v3h-1v-3zm3 0h2v1h-2v-1zm5 1h2v2h-2v-2zM4 23h2v1H4v-1zm5 0h1v2H9v-2zm3 0h2v3h-2v-3zm4 0h3v1h-3v-1zm5 1h2v1h-2v-1zm4 0h4v4h-4v-4zm1 1v2h2v-2h-2zm5-1h2v2h-2v-2zm-19 3h1v3h-1v-3zm3 0h2v1h-2v-1zm4 0h1v4h-1v-4zm2 1h2v1h-2v-1zm9 0h2v3h-2v-3zm-16 1h2v2h-2v-2zm5 1h2v1h-2v-1zm4 0h1v3h-1v-3zm3 0h2v2h-2v-2zm6 0h1v3h-1v-3zM12 31h1v2h-1v-2zm3 0h2v2h-2v-2zm5 1h3v1h-3v-1zm6 0h2v1h-2v-1zm4 0h3v1h-3v-1z"/>
+    </svg>
     <h2>Quét mã để mở trang web</h2>
     <p>https://onrender.com</p>
   </div>
-
-  <script type="module">
-    import QRCode from 'https://jsdelivr.net';
-    const khung = document.getElementById('ma-qr');
-    QRCode.toCanvas('https://onrender.com', {
-      width: 240,
-      margin: 1,
-      color: {
-        dark: '#15803d',
-        light: '#ffffff'
-      }
-    }, function (err, canvas) {
-      if (!err) khung.appendChild(canvas);
-    });
-  </script>
 </body>
 </html>
