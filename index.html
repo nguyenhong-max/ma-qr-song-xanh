@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Mã QR Sống Xanh</title>
-  <script src="https://unpkg.com"></script>
   <style>
     body {
       display: flex;
@@ -41,13 +40,18 @@
     <p>https://onrender.com</p>
   </div>
 
-  <script>
-    new QRCode(document.getElementById("ma-qr"), {
-      text: "https://onrender.com",
+  <script type="module">
+    import QRCode from 'https://jsdelivr.net';
+    const khung = document.getElementById('ma-qr');
+    QRCode.toCanvas('https://onrender.com', {
       width: 240,
-      height: 240,
-      colorDark : "#15803d",
-      colorLight : "#ffffff"
+      margin: 1,
+      color: {
+        dark: '#15803d',
+        light: '#ffffff'
+      }
+    }, function (err, canvas) {
+      if (!err) khung.appendChild(canvas);
     });
   </script>
 </body>
